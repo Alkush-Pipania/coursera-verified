@@ -2,8 +2,13 @@ import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { getUrlParam } from '../utils/urlParams';
 
+const formatName = (name: string) => {
+    return name.toUpperCase().split('').join(' ');
+  };
+
 const BadgeHeader = () => {
   const name = getUrlParam('name') || 'No Name Given';
+  const formattedName = formatName(name);
   return (
     <div className="flex items-center  gap-4 px-28 py-4 bg-gray-100 border-b">
       <div className="w-16 h-16 flex items-center justify-center bg-gray-200 rounded-full">
@@ -11,7 +16,7 @@ const BadgeHeader = () => {
       </div>
       <div className="flex-1">
         <p className="text-gray-700">
-          This badge was issued to <a href="#" className="text-teal-700 hover:underline">{name}</a> on December 20, 2024
+          This badge was issued to <a href="#" className="text-teal-700 hover:underline">{formattedName}</a> on December 20, 2024
         </p>
       </div>
       <div className="flex items-center gap-4">
