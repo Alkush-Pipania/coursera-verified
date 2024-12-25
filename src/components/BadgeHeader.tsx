@@ -16,7 +16,7 @@ const BadgeHeader = () => {
       </div>
       <div className="flex-1">
         <p className="text-gray-700">
-          This badge was issued to <a href="#" className="text-teal-700 hover:underline">{formattedName}</a> on December 20, 2024
+          This badge was issued to <a href="#" className="text-teal-700 hover:underline">{formattedName}</a> on December 23, 2024
         </p>
       </div>
       <div className="flex items-center gap-4">
